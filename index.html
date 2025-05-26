@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Bank App</title>
 </head>
 
@@ -16,14 +17,50 @@
                 <h1>Bank App</h1>
                 <p class="welcome-text">Do you have an account?</p>
                 <div class="options">
-                    <button id="log-in">Log In</button>
-                    <button id="create-account">Create Account</button>
+                    <button id="log-in" class="action">Log In</button>
+                    <button id="create-account" class="action">Create Account</button>
                 </div>
             </div>
-            <div class="account-container"></div>
-            <div class="new-account-container"></div>
+
+            <div class="account-container">
+                <form action="#">
+                    <label for="login-name">Name:</label><br />
+                    <input type="text" id="login-name" name="login-name" required /><br /><br />
+
+                    <label for="login-id">ID:</label><br />
+                    <input type="text" id="login-id" name="login-id" required /><br /><br />
+
+                    <label for="login-password">Password:</label><br />
+                    <input type="password" id="login-password" name="login-password" required /><br /><br />
+
+                    <div class="buttons">
+                        <button type="button" class="action back-btn">Back</button>
+                        <button type="submit" class="action submit-btn">Sign In</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="new-account-container">
+                <form action="#">
+                    <label for="create-name">Name:</label><br />
+                    <input type="text" id="create-name" name="create-name" required /><br /><br />
+
+                    <label for="create-id">ID:</label><br />
+                    <input type="text" id="create-id" name="create-id" required /><br /><br />
+
+                    <label for="create-password">Password:</label><br />
+                    <input type="password" id="create-password" name="create-password" required /><br /><br />
+
+                    <label for="create-balance">Balance:</label><br />
+                    <input type="number" id="create-balance" name="create-balance" step="0.01" required /><br /><br />
+
+                    <div class="buttons">
+                         <button type="button" class="action back-btn">Back</button>
+                        <button type="submit" class="action submit-btn">Create</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
-
 </body>
 </html>
